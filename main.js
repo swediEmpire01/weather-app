@@ -348,7 +348,7 @@ function formateTime(time){
 
 function dayOfWeek(date){
     date= date.toString().split("-");
-    let year= date[0], month= date[2], day= date[1]; 
+    let year= date[0], month= date[1], day= date[2]; 
     let strtDte= 0;
     let weekDay;
 
@@ -373,7 +373,7 @@ function dayOfWeek(date){
         strtDte+= g;
     }
     
-    switch (strtDte) {
+    switch (strtDte+=3) {
         case 1:
         weekDay= "Sunday";
             break;
@@ -529,7 +529,6 @@ function getLocation(){
 function chngePhotos(){
     if(showingIndex < photos.length){
         currentDisplay[9].childNodes[1].src= photos[showingIndex];
-        console.log(showingIndex+1)
         showingIndex++
     } 
     else{
