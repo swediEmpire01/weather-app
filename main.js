@@ -345,8 +345,9 @@ function formateTime(time){
 }
 
 function dayOfWeek(date){
+    console.log(date);
     date= date.toString().split("-");
-    let year= date[0], month= date[2], day= date[1]; 
+    let year= date[0], month= date[1], day= date[2]; 
     let strtDte= 0;
     let weekDay;
 
@@ -371,7 +372,7 @@ function dayOfWeek(date){
         strtDte+= g;
     }
     
-    switch (strtDte+=3) {
+    switch (strtDte) {
         case 1:
         weekDay= "Sunday";
             break;
