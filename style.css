@@ -232,8 +232,8 @@ section#forcast-container.container{
     }
 }
 @media (max-width: 1185px) {
-    section#second-sections, div.highlights-container{
-        max-width: 100%;
+    section#second-sections, div.highlights-container, section#second-sections{
+        width: 100%;
 
     }
 }
