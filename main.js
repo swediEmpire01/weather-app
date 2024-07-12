@@ -301,14 +301,14 @@ function displayWeatherData(){
     function displayCurrentWeather(dataToday, data){
 
         let icon=dataToday.icon, 
-            temp= dataToday.feelslike.toString(), 
+            temp= dataToday.feelslike, 
             description= data.description, 
             location= data.resolvedAddress.toString(),
             date= data.days[0].datetime, 
             time= formateTime(dataToday.datetime);
 
         currentDisplay[1].childNodes[1].src =`./assets/weather-icons/${icon}.svg`;//= icon; 
-        currentDisplay[3].childNodes[0].textContent= temp.slice(0, temp.lastIndexOf(".")); 
+        currentDisplay[3].childNodes[0].textContent= Math.round(Number(temp)); 
         currentDisplay[3].childNodes[1].textContent= " °F"; 
 
         currentDisplay[5].childNodes[0].textContent= dayOfWeek(date);
