@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="shortcut icon" href="./assets/icon/drop.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="container" id="first-container">
+            <form action="./index.html" method="get">
+                <div >
+                    <span id="search-box">
+                        <input type="text" name="" id="search-input-box" placeholder="Cleveland, United Sta..." class="search-tem">
+                        <button type="submit" class="search-tem">
+                            <img src="./assets/icon/search.svg" alt="search-icon">
+                        </button>
+                    </span>
+                </div>
+                <div class="location"  onclick="getLocation()">
+                    <img src="./assets/icon/location.svg" alt="location-icon">
+                </div>
+            </form>
+        <div class="weather">
+            <div id="weather-img">
+                <img src="./assets/weather-icons/clear-day.svg" alt="sun-icon">
+            </div>
+            <h3 id="tempreture">
+                70 <span> °F</span>
+            </h3>
+            <div id="date">
+                24 July 2024, <span> 6:30 PM</span>
+            </div>
+            <div class="short-info">
+                <h4>
+                    <img src="./assets/icon/cloud.svg" alt="cloud-icon">
+                    Short weather description
+                </h4>
+                <h4>
+                    <img src="./assets/icon/location.svg" alt="location-icon">
+                    <div>
+                        City
+                        <p> State, Country</p>
+                    </div>
+                </h4>
+
+            </div>
+            <div id="location">
+                <img src="./assets/backgroung-img/light.jpg" alt="">
+            </div>
+        </div>
+        <div> 
+        </div>
+    </section>
+    
+    <section id="second-sections">
+        <section class="container" id="forcast-container">
+            <nav>
+                <div id="right">
+                    <h2 onclick="changeForcast()">Week forcast</h2>
+                    <h2 onclick="changeForcast()" class="not-active-h2">Daily forcast</h2>
+                </div>
+
+                <div id="tempreture-type">
+                    <span class="tempreture-active" id="ferenhight" >°F</span>
+                    <span class="tempreture-not" id="celcius"> °C</span>
+                </div>
+            </nav>
+            <div id="forcast-box">
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+                <div class="forcast">
+                    <span>
+                        Wed
+                    </span>
+                    <img src="./assets/weather-icons/rain.svg" alt="weather-icon">
+                    <div class="forcast-temps"> 59°<span> 28°</span></div>
+                </div>
+            </div>
+            <div id="daily-forcast">
+
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="highlights-container">
+                <h2>
+                    Today's Overview
+                </h2>
+                <div class="highlights-box">
+
+                    <div class="highlights">
+
+                        <div class="big-status" id="wind-status">
+                            <h3>Wind Status</h3>
+                            <div  class="wind-status">
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                                <div class="wind-bars"></div>
+                            </div>
+                            <div id="info-one">
+                                <p class="highlight-numbers">
+                                    03  <span>km</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="small-status" id="humidity">
+                            <div class="first-mini-box">
+                                <h4>Humidity</h4>
+                                <p class="highlight-numbers">
+                                    85  <span>%</span>
+                                </p>
+                            </div>
+                            <div class="second-mini-box">
+                                    <img src="./assets/icon/ph--drop.svg" alt="drop-icon">
+                                    the humid is pretty high
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        <div class="big-status" id="uvIndex">
+                            <h3>UV Index</h3>
+                            <div class="display" id="curve-graph">
+                                <svg  xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    width="160px" height="160px" >
+                                    <defs>
+                                        <linearGradient  id="LightTheme">
+                                            <stop offset="0%" stop-color="#ffc62d" />
+                                            <stop offset="100%" stop-color="#ff5050" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="80" cy="80"  r="70" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div id="info-two">
+                                <p class="highlight-numbers">
+                                    5.50  <span>uv</span>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="small-status" id="visibility">
+                            <div class="first-mini-box">
+                                <h4>Visibility</h4>
+                                <p class="highlight-numbers">
+                                    03<span>km</span>
+                                </p>
+                            </div>
+                            <div class="second-mini-box">
+                                <img src="./assets/icon/eye.svg" alt="eye-icon">
+                                the hze is  visible
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+
+                        <div class="big-status" id="sunrise">
+                            <h3>Sunrise & Sunset</h3>
+                            <div id="info-three">
+                                
+                                <div class="sun-timing">
+                                    <img src="./assets/icon/sunset/solar--sunrise-bold-duotone.svg" alt="sun-rising-icon">
+                                    Sunrise
+                                    <span>5:50 AM</span>
+
+                                </div>
+                                <div class="sun-timing">
+                                    <img src="./assets/icon/sunset/solar--sunset-bold-duotone.svg" alt="sun-setting-icon">
+                                    Sunset
+                                    <span>6:30 PM</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="small-status" id="feels-like">
+                            <div class="first-mini-box">
+                                <h4>Feels like</h4>
+                                <p class="highlight-numbers">
+                                    <img src="./assets/icon/temperature.svg" alt="temperature-icon">
+                                    85 
+                                </p>
+                            </div>
+                            <div class="second-mini-box">
+                                The humid is mking it fee high 
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+
+    <footer>
+        <p>if issues found <br>
+            please report to :<a href="mailto:husseniswedi2@gmail.com">husseniswedi2@gmail.com</a>
+        </p>
+        <p>
+            Copyright © 2024 Husseni Swedi. All Rights Reserved
+        </p>
+
+    </footer>
+<script src="/main.js"></script>
+    
+</body>
+</html>
