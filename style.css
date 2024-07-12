@@ -353,7 +353,6 @@ div.forcast-temps span{
 div.highlights-container{
     display: flex;
     width: 100%;
-    max-width: 840px;
     flex-direction: column;
 }
 div.highlights-container h2{
