@@ -231,6 +231,12 @@ section#forcast-container.container{
 
     }
 }
+@media (max-width: 1185px) {
+    section#second-sections{
+        max-width: 100%;
+
+    }
+}
 
 nav{
     display: flex;
