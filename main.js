@@ -133,8 +133,6 @@ async function getVisualWeatherData(cityname, countrycode){
 }
 //THe main, display function
 function displayWeatherData(){
-    console.log(apiData)
-
     const CURRENTDATA= apiData.currentConditions
 
     displayCurrentWeather(CURRENTDATA, apiData)
@@ -348,7 +346,7 @@ function formateTime(time){
 
 function dayOfWeek(date){
     date= date.toString().split("-");
-    let year= date[0], month= date[1], day= date[2]; 
+    let year= date[0], month= date[2], day= date[1]; 
     let strtDte= 0;
     let weekDay;
 
