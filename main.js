@@ -372,25 +372,25 @@ function dayOfWeek(date){
     }
     
     switch (strtDte) {
-        case 1:
+        case 5:
         weekDay= "Sunday";
             break;
-        case 2:
+        case 6:
         weekDay= "Monday" 
             break;
-        case 3:
+        case 7:
         weekDay= "Tuesday" ; 
             break;
-        case 4:
+        case 1:
         weekDay= "Wednesday";  
             break;
-        case 5:
+        case 2:
         weekDay= "Thursday" ; 
             break;
-        case 6:
+        case 3:
         weekDay= "Friday"; 
             break;
-        case 7:
+        case 4:
         weekDay= "Saturday";
             break;
     
