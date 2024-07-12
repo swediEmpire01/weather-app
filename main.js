@@ -347,7 +347,7 @@ function formateTime(time){
 function dayOfWeek(date){
     console.log(date);
     date= date.toString().split("-");
-    let year= date[0], month= date[1], day= date[2]; 
+    let year= Number(date[0]), month= Number(date[1]) -1 , day= Number(date[2]); 
     let strtDte= 0;
     let weekDay;
 
